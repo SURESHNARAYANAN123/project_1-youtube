@@ -356,7 +356,7 @@ if selected == "Query Zone":
                                   key='collection_question')
 
     # Create a connection to SQL
-    connect_for_question = mysql.connector.connect(host='localhost', user='root', password='password',port=, db='your database name')
+    connect_for_question = mysql.connector.connect(host='', user='', password='password',port=, db='your database name')
     cursor = connect_for_question.cursor()
     engine = create_engine("mysql+mysqlconnector://root:password@localhost:port/your database name")
 
