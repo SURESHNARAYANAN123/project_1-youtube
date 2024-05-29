@@ -60,7 +60,7 @@ elif selected == "Data Zone":
             st.session_state.Get_state = True
 
 
-            api_key="AIzaSyCEVR6_s7R17hG7Ox76VHlIsJmj02mZyAo"            
+            api_key="your api key"            
             youtube=build("youtube","v3",developerKey=api_key)
     #[Function to get channel statisics]
 
