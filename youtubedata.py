@@ -254,19 +254,19 @@ elif selected == "Data Zone":
             #**Connection to SQL**
 
             mydb=mysql.connector.connect(host="localhost",
-                                            user="root",
-                                            password="Suresh1992",
-                                            database="youtubedata",
+                                            user="",
+                                            password="",
+                                            database="",
                                             )
             cursor=mydb.cursor()
-            cursor.execute('CREATE DATABASE IF NOT EXISTS  youtubedata')
+            cursor.execute('CREATE DATABASE IF NOT EXISTS  your database name')
             cursor.close()
             mydb.close()
 
 
 
 
-            engine = create_engine("mysql+mysqlconnector://root:Suresh1992@localhost:3306/youtubedata")
+            engine = create_engine("mysql+mysqlconnector://root:password@localhost:port/your database name")
             connection = engine.connect()
                             
         
@@ -322,7 +322,7 @@ if selected == "Analysis Zone":
     Check_channel = st.checkbox('**Check available channel data for analysis**')
     if Check_channel:
         # Create database connection
-        engine = create_engine("mysql+mysqlconnector://root:Suresh1992@localhost:3306/youtubedata")
+        engine = create_engine("mysql+mysqlconnector://root:password@localhost:port/your database name")
                     # Execute SQL query to retrieve channel names
         query = "SELECT channel_name FROM channels;"
         results = pd.read_sql(query,engine)
@@ -356,9 +356,9 @@ if selected == "Query Zone":
                                   key='collection_question')
 
     # Create a connection to SQL
-    connect_for_question = mysql.connector.connect(host='localhost', user='root', password='Suresh1992',port=3306, db='youtubedata')
+    connect_for_question = mysql.connector.connect(host='localhost', user='root', password='password',port=, db='your database name')
     cursor = connect_for_question.cursor()
-    engine = create_engine("mysql+mysqlconnector://root:Suresh1992@localhost:3306/youtubedata")
+    engine = create_engine("mysql+mysqlconnector://root:password@localhost:port/your database name")
 
     # Q1
     if question_tosql == '1. What are the names of all the videos and their corresponding channels?':
